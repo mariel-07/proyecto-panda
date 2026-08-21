@@ -39,9 +39,8 @@ export function Dashboard({ onLogout }: DashboardProps) {
 
   const handleTabChange = (tab: 'pandas' | 'numpy' | 'reportes' | 'pn') => {
     setActiveTab(tab);
-    setIsSidebarOpen(false); // Cierra el sidebar en móviles al seleccionar una opción
+    setIsSidebarOpen(false);
   };
-
   return (
     <div className="dashboard-container">
       {/* BOTÓN MÓVIL Y FONDO OSCURO (OVERLAY) */}

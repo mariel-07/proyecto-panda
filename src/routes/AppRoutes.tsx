@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout';
 import Login from '../pages/Login';
 import Dashboard from '../pages/Dashboard';
+import Logout from '../pages/Logout';
 
 function AppRoutes() {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(
@@ -34,7 +35,8 @@ function AppRoutes() {
 
       {isAuthenticated ? ( 
         <Route element={<MainLayout onLogout={handleLogout} />}>
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard onLogout={handleLogout} />} />
+          <Route path="/logout" element={<Logout onLogout={handleLogout} />} />
           <Route path="*" element={<Navigate to="/dashboard" replace />} />
         </Route>
       ) : (

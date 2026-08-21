@@ -28,10 +28,13 @@ export function Dashboard({ onLogout }: DashboardProps) {
     setHeaders(cleanHeaders);
   };
 
-  const executeLogout = () => {
-    localStorage.removeItem("isAuthenticated");
-    if (onLogout) onLogout();
-    navigate('/login', { replace: true });
+ const executeLogout = () => {
+    setShowLogoutModal(false);
+    if (onLogout) {
+      onLogout();
+    } else {
+      navigate('/logout');
+    }
   };
 
   const handleTabChange = (tab: 'pandas' | 'numpy' | 'reportes' | 'pn') => {

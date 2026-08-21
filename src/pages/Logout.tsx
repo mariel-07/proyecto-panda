@@ -10,11 +10,11 @@ const Logout: React.FC<LogoutProps> = ({ onLogout }) => {
 
   useEffect(() => {
     onLogout();
-    navigate('/login');
+    navigate('/login', { replace: true });
   }, [onLogout, navigate]);
 
   return (
-    <div style={{ padding: '20px', color: '#fff' }}>
+    <div style={{ padding: '40px', color: '#fff', textAlign: 'center' }}>
       <p>Cerrando sesión...</p>
     </div>
   );

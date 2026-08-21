@@ -1,0 +1,1 @@
+export type RecordRow = Record<string, string | number>;

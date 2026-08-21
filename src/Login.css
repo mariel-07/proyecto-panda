@@ -1,0 +1,140 @@
+/* ==========================================
+   ESTILO LOGIN CORPORATIVO Y ELEGANTE
+   ========================================== */
+
+/* Contenedor principal con fondo oscuro neutro */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #0b0f17;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Tarjeta de Login refinada */
+.login-card {
+  background: #111827;
+  padding: 48px 40px;
+  border-radius: 12px;
+  border: 1px solid #1f293d;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 380px;
+  text-align: left;
+  transition: border-color 0.2s ease;
+}
+
+.login-card:hover {
+  border-color: #374151;
+}
+
+/* Encabezado elegante y discreto */
+.login-card h2 {
+  margin: 0 0 6px 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #f9fafb;
+  letter-spacing: -0.02em;
+}
+
+/* Subtítulo sobrio */
+.login-card p {
+  color: #6b7280;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Etiquetas en gris neutro de alta legibilidad */
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #d1d5db;
+  margin-bottom: 8px;
+}
+
+/* Inputs minimalistas */
+.form-group input {
+  width: 100%;
+  padding: 11px 14px;
+  background-color: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #f9fafb;
+  outline: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.form-group input::placeholder {
+  color: #6b7280;
+}
+
+.form-group input:focus {
+  border-color: #3b82f6;
+  background-color: #1f2937;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* Botón corporativo en Azul Steel */
+.btn-login {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-login:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-login:active {
+  transform: scale(0.99);
+}
+/* Soporte para íconos dentro de inputs */
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  color: #6b7280;
+  pointer-events: none;
+}
+
+.input-with-icon input {
+  padding-left: 40px !important; /* Espacio para el ícono */
+}
+
+.input-with-icon input:focus + .input-icon {
+  color: #3b82f6;
+}
+
+/* Ajustes del botón con ícono */
+.btn-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}

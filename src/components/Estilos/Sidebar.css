@@ -1,0 +1,401 @@
+
+/* ========================================
+   SIDEBAR - PANDA
+======================================== */
+
+.sidebar {
+  position: fixed;
+
+  left: 0;
+  top: 70px;
+
+  width: 250px;
+  height: calc(100vh - 70px);
+
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+
+  color: #1e293b;
+
+  padding: 20px 15px;
+
+  box-sizing: border-box;
+
+  overflow-y: auto;
+
+  z-index: 900;
+
+  border-right: 1px solid #e2e8f0;
+
+  box-shadow:
+    4px 0 15px rgba(15, 23, 42, 0.08);
+}
+
+
+/* ========================================
+   LOGO
+======================================== */
+
+.sidebar-logo {
+  min-height: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 15px;
+}
+
+
+/* ========================================
+   MENÚ
+======================================== */
+
+.sidebar-menu {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+
+/* ========================================
+   TÍTULO DEL MENÚ
+======================================== */
+
+.menu-title {
+  display: block;
+
+  margin: 5px 10px 18px;
+
+  color: #64748b;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+
+  position: relative;
+
+  padding-bottom: 10px;
+}
+
+
+/* ========================================
+   DIVISOR BAJO MENÚ PRINCIPAL
+======================================== */
+
+.menu-title::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  bottom: 0;
+
+  height: 2px;
+
+  background: #e2e8f0;
+
+  border-radius: 5px;
+}
+
+
+/* ========================================
+   DIVISOR DESTACADO
+======================================== */
+
+.menu-title::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -1px;
+
+  width: 45px;
+
+  height: 3px;
+
+  background: #2563eb;
+
+  border-radius: 5px;
+
+  z-index: 1;
+}
+
+
+/* ========================================
+   ENLACES
+======================================== */
+
+.sidebar-link {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 12px 14px;
+
+  border-radius: 8px;
+
+  color: #334155;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+/* ========================================
+   ICONOS
+======================================== */
+
+.sidebar-link svg {
+  width: 19px;
+
+  height: 19px;
+
+  flex-shrink: 0;
+
+  color: #64748b;
+
+  transition:
+    color 0.2s ease;
+}
+
+
+/* ========================================
+   HOVER
+======================================== */
+
+.sidebar-link:hover {
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  transform: translateX(2px);
+}
+
+.sidebar-link:hover svg {
+  color: #2563eb;
+}
+
+
+/* ========================================
+   OPCIÓN ACTIVA
+======================================== */
+
+.sidebar-link.active {
+  background: #2563eb;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 4px 10px rgba(37, 99, 235, 0.20);
+}
+
+.sidebar-link.active svg {
+  color: #ffffff;
+}
+
+
+/* ========================================
+   DIVISOR DESPUÉS DE REPORTES
+======================================== */
+
+.sidebar-link:nth-of-type(4) {
+  margin-bottom: 20px;
+
+  position: relative;
+}
+
+
+/* ========================================
+   LÍNEA DEL DIVISOR DE REPORTES
+======================================== */
+
+.sidebar-link:nth-of-type(4)::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  bottom: -11px;
+
+  height: 3px;
+
+  background: #2563eb;
+
+  border-radius: 5px;
+
+  box-shadow:
+    0 2px 6px rgba(37, 99, 235, 0.25);
+}
+
+
+/* ========================================
+   CERRAR SESIÓN
+======================================== */
+
+.sidebar-footer {
+  margin-top: auto;
+
+  padding-top: 15px;
+
+  border-top: 2px solid #e2e8f0;
+}
+
+
+/* ========================================
+   BOTÓN CERRAR SESIÓN
+======================================== */
+
+.logout-button {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 12px 14px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: #64748b;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+/* ========================================
+   ICONO CERRAR SESIÓN
+======================================== */
+
+.logout-button svg {
+  width: 19px;
+
+  height: 19px;
+
+  color: #64748b;
+
+  transition:
+    color 0.2s ease;
+}
+
+
+/* ========================================
+   HOVER CERRAR SESIÓN
+======================================== */
+
+.logout-button:hover {
+  background: #fef2f2;
+
+  color: #dc2626;
+
+  transform: translateX(2px);
+}
+
+.logout-button:hover svg {
+  color: #dc2626;
+}
+
+
+/* ========================================
+   SCROLLBAR
+======================================== */
+
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+
+  border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+
+  .sidebar {
+    width: 220px;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .sidebar {
+    position: relative;
+
+    top: 0;
+
+    width: 100%;
+
+    height: auto;
+
+    min-height: auto;
+
+    border-right: none;
+
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .sidebar-menu {
+    padding-bottom: 10px;
+  }
+
+  .sidebar-footer {
+    margin-top: 15px;
+  }
+
+}
+

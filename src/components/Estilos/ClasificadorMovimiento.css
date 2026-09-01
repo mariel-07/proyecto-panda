@@ -1,0 +1,404 @@
+
+/* =========================================
+   CLASIFICADOR DE MOVIMIENTO
+   ESTILOS EXCLUSIVOS DE ESTE COMPONENTE
+========================================= */
+
+.mov-page {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+
+  padding: 25px 30px;
+
+  color: #1e293b;
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.mov-page .mov-header {
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.mov-page .mov-title {
+  display: inline-block;
+
+  margin: 0 0 8px 0;
+  padding: 10px 16px;
+
+  border: 2px solid blue;
+  border-radius: 16px;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  font-size: 20px;
+  font-weight: 400;
+
+  box-shadow:
+    0 8px 20px rgba(79, 70, 229, 0.25);
+}
+
+
+/* =========================================
+   DESCRIPCIÓN
+========================================= */
+
+.mov-page .mov-description {
+  margin: 5px 0 0 3px;
+
+  color: #475569;
+
+  font-size: 15px;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   CONTROLES
+========================================= */
+
+.mov-page .mov-controls {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+
+/* =========================================
+   BOTONES
+========================================= */
+
+.mov-page .mov-start-button,
+.mov-page .mov-stop-button {
+  padding: 13px 24px;
+
+  border: none;
+  border-radius: 11px;
+
+  background: linear-gradient(
+    135deg,
+    #4f46e5,
+    #7c3aed
+  );
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 6px 15px rgba(79, 70, 229, 0.25);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* =========================================
+   HOVER BOTONES
+========================================= */
+
+.mov-page .mov-start-button:hover,
+.mov-page .mov-stop-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 22px rgba(79, 70, 229, 0.35);
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.mov-page .mov-error {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  margin-bottom: 20px;
+  padding: 13px 16px;
+
+  background: #fef2f2;
+
+  border-left: 5px solid #ef4444;
+  border-radius: 10px;
+
+  color: #b91c1c;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  box-shadow:
+    0 5px 15px rgba(239, 68, 68, 0.12);
+}
+
+
+/* =========================================
+   TARJETA DE CÁMARA
+========================================= */
+
+.mov-page .mov-camera-card {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  margin-bottom: 20px;
+  padding: 25px;
+
+  background: #ffffff;
+
+  border: 1px solid #e0e7ff;
+  border-radius: 18px;
+
+  box-shadow:
+    0 7px 20px rgba(79, 70, 229, 0.08);
+}
+
+
+/* =========================================
+   CANVAS
+========================================= */
+
+.mov-page .mov-camera-canvas {
+  display: block;
+
+  width: 400px !important;
+  height: 400px !important;
+
+  max-width: 100%;
+
+  background: #0f172a;
+
+  border: 5px solid #6366f1;
+  border-radius: 18px;
+
+  box-shadow:
+    0 0 0 5px #eef2ff,
+    0 12px 30px rgba(79, 70, 229, 0.25);
+}
+
+
+/* =========================================
+   TARJETA DE RESULTADOS
+========================================= */
+
+.mov-page .mov-results-card {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 22px;
+
+  background: #ffffff;
+
+  border: 1px solid #e0e7ff;
+  border-radius: 18px;
+
+  box-shadow:
+    0 7px 20px rgba(79, 70, 229, 0.08);
+}
+
+
+/* =========================================
+   TÍTULO DE RESULTADOS
+========================================= */
+
+.mov-page .mov-results-title {
+  margin-bottom: 15px;
+
+  padding-left: 10px;
+
+  border-left: 5px solid #6366f1;
+
+  color: #3730a3;
+
+  font-size: 19px;
+  font-weight: 800;
+}
+
+
+/* =========================================
+   LISTA
+========================================= */
+
+.mov-page .mov-results-list {
+  width: 100%;
+}
+
+
+/* =========================================
+   PREDICCIÓN
+========================================= */
+
+.mov-page .mov-prediction {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  margin-bottom: 10px;
+  padding: 14px 16px;
+
+  background: linear-gradient(
+    90deg,
+    #eef2ff,
+    #f5f3ff
+  );
+
+  border-left: 4px solid #7c3aed;
+  border-radius: 10px;
+
+  color: #334155;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+
+/* =========================================
+   ÚLTIMA PREDICCIÓN
+========================================= */
+
+.mov-page .mov-prediction:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================
+   HOVER PREDICCIÓN
+========================================= */
+
+.mov-page .mov-prediction:hover {
+  transform: translateX(4px);
+
+  background: linear-gradient(
+    90deg,
+    #e0e7ff,
+    #ede9fe
+  );
+}
+
+
+/* =========================================
+   NOMBRE DE CLASE
+========================================= */
+
+.mov-page .mov-prediction-class {
+  color: #3730a3;
+
+  font-weight: 800;
+}
+
+
+/* =========================================
+   PORCENTAJE
+========================================= */
+
+.mov-page .mov-prediction-percent {
+  color: #4f46e5;
+
+  font-weight: 800;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .mov-page {
+    padding: 20px;
+  }
+
+}
+
+
+/* =========================================
+   MÓVIL
+========================================= */
+
+@media (max-width: 700px) {
+
+  .mov-page {
+    padding: 15px;
+  }
+
+  .mov-page .mov-title {
+    font-size: 19px;
+  }
+
+  .mov-page .mov-camera-card {
+    padding: 15px;
+  }
+
+  .mov-page .mov-camera-canvas {
+    width: 300px !important;
+    height: 300px !important;
+  }
+
+  .mov-page .mov-results-card {
+    padding: 15px;
+  }
+
+}
+
+
+/* =========================================
+   MÓVIL PEQUEÑO
+========================================= */
+
+@media (max-width: 400px) {
+
+  .mov-page {
+    padding: 10px;
+  }
+
+  .mov-page .mov-camera-card {
+    padding: 10px;
+  }
+
+  .mov-page .mov-camera-canvas {
+    width: 220px !important;
+    height: 220px !important;
+  }
+
+  .mov-page .mov-results-card {
+    padding: 10px;
+  }
+
+  .mov-page .mov-prediction {
+    padding: 12px;
+
+    font-size: 13px;
+  }
+
+}
+

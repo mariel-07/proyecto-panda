@@ -1,0 +1,501 @@
+
+/* =====================================================
+   VISTA NUMPY
+===================================================== */
+
+.vista-numpy {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #f5f7fb;
+  color: #1e293b;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+
+/* =====================================================
+   ENCABEZADO
+===================================================== */
+
+.numpy-header {
+  margin-bottom: 18px;
+}
+
+.numpy-header h1 {
+  margin: 0 0 5px 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.numpy-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 12px;
+}
+
+/* =====================================================
+   DISTRIBUCIÓN PRINCIPAL
+===================================================== */
+
+.numpy-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 18px;
+  align-items: start;
+}
+
+.numpy-main {
+  min-width: 0;
+}
+
+.numpy-sidebar {
+  width: 270px;
+}
+
+/* =====================================================
+   TARJETAS
+===================================================== */
+
+.numpy-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+  box-sizing: border-box;
+}
+
+.numpy-card h2 {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #334155;
+}
+
+.numpy-card p {
+  margin: 8px 0;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.numpy-card strong {
+  color: #1e293b;
+}
+
+/* =====================================================
+   BOTÓN ELEGIR ARCHIVO
+===================================================== */
+
+.numpy-upload {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 9px 16px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  border-radius: 7px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  box-shadow: 0 3px 8px rgba(37, 99, 235, 0.22);
+}
+
+.numpy-upload:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 12px rgba(37, 99, 235, 0.28);
+}
+
+.numpy-upload:active {
+  transform: translateY(0);
+}
+
+/* Oculta el Choose File original */
+
+.numpy-upload input[type="file"] {
+  display: none;
+}
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+.numpy-card input[type="text"],
+.numpy-card select {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 9px 10px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: #334155;
+
+  font-size: 12px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.numpy-card input[type="text"]:focus,
+.numpy-card select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* =====================================================
+   ETIQUETA DE COLUMNA
+===================================================== */
+
+.numpy-label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  color: #475569;
+}
+
+/* =====================================================
+   INFORMACIÓN
+===================================================== */
+
+.numpy-info-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 10px;
+}
+
+.numpy-info-item {
+  padding: 11px;
+
+  border-radius: 8px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.numpy-info-item span {
+  font-size: 10px;
+  color: #64748b;
+}
+
+.numpy-info-item strong {
+  font-size: 16px;
+  color: #2563eb;
+}
+
+/* =====================================================
+   TABLA
+===================================================== */
+
+.numpy-table-container {
+  width: 100%;
+  overflow-x: auto;
+
+  border-radius: 7px;
+}
+
+.numpy-table-container table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  font-size: 11px;
+}
+
+.numpy-table-container th {
+  padding: 9px 10px;
+
+  background: #f1f5f9;
+
+  color: #334155;
+
+  text-align: left;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  border-bottom: 2px solid #e2e8f0;
+
+  white-space: nowrap;
+}
+
+.numpy-table-container td {
+  padding: 8px 10px;
+
+  color: #475569;
+
+  border-bottom: 1px solid #e2e8f0;
+
+  white-space: nowrap;
+}
+
+.numpy-table-container tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* =====================================================
+   CONTADOR
+===================================================== */
+
+.numpy-counter {
+  margin-top: 8px !important;
+
+  font-size: 10px !important;
+
+  color: #94a3b8 !important;
+}
+
+/* =====================================================
+   OPERACIONES
+===================================================== */
+
+.numpy-operaciones {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.numpy-operaciones button {
+  width: 100%;
+
+  border: none;
+
+  border-radius: 7px;
+
+  padding: 9px 10px;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.numpy-operaciones button:hover:not(:disabled) {
+  background: #1d4ed8;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 3px 8px rgba(37, 99, 235, 0.2);
+}
+
+.numpy-operaciones button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.numpy-operaciones button:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+/* =====================================================
+   BOTÓN LIMPIAR
+===================================================== */
+
+.numpy-operaciones .btn-limpiar {
+  background: #ef4444;
+}
+
+.numpy-operaciones .btn-limpiar:hover {
+  background: #dc2626;
+}
+
+/* =====================================================
+   ERROR
+===================================================== */
+
+.numpy-error {
+  margin-top: 10px !important;
+
+  padding: 9px 10px;
+
+  background: #fef2f2;
+
+  border: 1px solid #fecaca;
+
+  border-radius: 7px;
+
+  color: #dc2626 !important;
+
+  font-size: 11px !important;
+}
+
+/* =====================================================
+   RESULTADOS NUMPY
+===================================================== */
+
+.numpy-resultados h2 {
+  margin: 0 0 12px 0;
+
+  font-size: 14px;
+
+  color: #334155;
+}
+
+/* =====================================================
+   ESTADÍSTICAS NUMPY
+===================================================== */
+
+.numpy-stat {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 8px 0;
+
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.numpy-stat:last-child {
+  border-bottom: none;
+}
+
+.numpy-stat span {
+  font-size: 10px;
+
+  color: #64748b;
+}
+
+.numpy-stat strong {
+  font-size: 11px;
+
+  color: #2563eb;
+
+  text-align: right;
+}
+
+/* =====================================================
+   SELECT
+===================================================== */
+
+.numpy-card select {
+  appearance: none;
+
+  background-image:
+    linear-gradient(
+      45deg,
+      transparent 50%,
+      #64748b 50%
+    ),
+    linear-gradient(
+      135deg,
+      #64748b 50%,
+      transparent 50%
+    );
+
+  background-position:
+    calc(100% - 14px) 50%,
+    calc(100% - 9px) 50%;
+
+  background-size:
+    5px 5px,
+    5px 5px;
+
+  background-repeat: no-repeat;
+
+  padding-right: 28px;
+
+  cursor: pointer;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .numpy-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .numpy-sidebar {
+    width: 100%;
+  }
+
+  .numpy-operaciones {
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+/* =====================================================
+   MÓVIL
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .vista-numpy {
+    padding: 12px;
+  }
+
+  .numpy-header h1 {
+    font-size: 19px;
+  }
+
+  .numpy-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .numpy-operaciones {
+    grid-template-columns: 1fr;
+  }
+
+  .numpy-card {
+    padding: 12px;
+  }
+
+}
+

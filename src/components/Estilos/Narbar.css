@@ -1,0 +1,280 @@
+
+/* ========================================
+   NAVBAR - PANDA
+   TEMA CLARO
+======================================== */
+
+.navbar {
+  width: 100%;
+  height: 70px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e2e8f0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 30px;
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  z-index: 1000;
+
+  box-shadow:
+    0 2px 10px rgba(15, 23, 42, 0.06);
+}
+
+
+/* ========================================
+   BUSCADOR
+======================================== */
+
+.navbar-search {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: #64748b;
+}
+
+.navbar-search svg {
+  color: #2563eb;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.navbar-search:focus-within svg {
+  color: #7c3aed;
+
+  transform: scale(1.05);
+}
+
+.navbar-search input {
+  width: 260px;
+
+  padding: 10px 13px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 9px;
+
+  background: #f8fafc;
+
+  color: #0f172a;
+
+  outline: none;
+
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.navbar-search input::placeholder {
+  color: #94a3b8;
+}
+
+.navbar-search input:hover {
+  border-color: #94a3b8;
+}
+
+.navbar-search input:focus {
+  background: #ffffff;
+
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+
+/* ========================================
+   ACCIONES
+======================================== */
+
+.navbar-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+
+/* ========================================
+   BOTÓN NOTIFICACIONES
+======================================== */
+
+.navbar-icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 9px;
+
+  background: #f8fafc;
+
+  color: #64748b;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.navbar-icon:hover {
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  border-color: #bfdbfe;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 15px rgba(37, 99, 235, 0.10);
+}
+
+
+/* ========================================
+   USUARIO
+======================================== */
+
+.navbar-user {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: #475569;
+
+  font-size: 14px;
+
+  padding: 6px 10px;
+
+  border-radius: 10px;
+
+  transition:
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.navbar-user:hover {
+  background: #f8fafc;
+
+  box-shadow:
+    0 3px 12px rgba(15, 23, 42, 0.05);
+}
+
+
+/* ========================================
+   ICONO DEL USUARIO
+======================================== */
+
+.navbar-user > svg {
+  color: #2563eb;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.navbar-user:hover > svg {
+  color: #7c3aed;
+
+  transform: scale(1.05);
+}
+
+
+/* ========================================
+   INFORMACIÓN DEL USUARIO
+======================================== */
+
+.navbar-user div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.navbar-user strong {
+  color: #0f172a;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+.navbar-user span {
+  color: #64748b;
+
+  font-size: 12px;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .navbar-search input {
+    width: 220px;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .navbar-search input {
+    width: 180px;
+  }
+
+  .navbar-user div {
+    display: none;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .navbar-search {
+    display: none;
+  }
+
+  .navbar {
+    justify-content: flex-end;
+  }
+
+}

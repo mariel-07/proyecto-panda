@@ -1,0 +1,673 @@
+
+/* =====================================================
+   VISTA DOCUMENTOS
+   ESTILOS EXCLUSIVOS
+===================================================== */
+
+.doc-page {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+
+  padding: 25px 30px;
+
+  color: #1e293b;
+}
+
+
+/* =====================================================
+   ENCABEZADO
+===================================================== */
+
+.doc-page .doc-header {
+  margin-bottom: 25px;
+}
+
+.doc-page .doc-title {
+  margin: 0 0 8px 0;
+
+  color: #1e293b;
+
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.doc-page .doc-description {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 15px;
+}
+
+
+/* =====================================================
+   TARJETA SUBIR ARCHIVOS
+===================================================== */
+
+.doc-page .doc-upload-card {
+  box-sizing: border-box;
+
+  width: 100%;
+
+  margin-bottom: 25px;
+  padding: 30px;
+
+  background: #ffffff;
+
+  border: 2px dashed #9ca3af;
+  border-radius: 16px;
+
+  text-align: center;
+
+  box-shadow:
+    0 7px 20px rgba(79, 70, 229, 0.06);
+}
+
+
+/* =====================================================
+   TÍTULOS
+===================================================== */
+
+.doc-page .doc-section-title {
+  margin: 0 0 10px 0;
+
+  color: #3730a3;
+
+  font-size: 21px;
+  font-weight: 800;
+}
+
+
+/* =====================================================
+   DESCRIPCIÓN
+===================================================== */
+
+.doc-page .doc-upload-description {
+  margin: 0 0 20px 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+
+/* =====================================================
+   SELECTOR DE ARCHIVOS
+===================================================== */
+
+.doc-page .doc-file-label {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  position: relative;
+
+  padding: 13px 22px;
+
+  background: linear-gradient(
+    135deg,
+    #4f46e5,
+    #7c3aed
+  );
+
+  border-radius: 11px;
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 6px 15px rgba(79, 70, 229, 0.25);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.doc-page .doc-file-label:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 22px rgba(79, 70, 229, 0.35);
+}
+
+.doc-page .doc-file-icon {
+  font-size: 18px;
+}
+
+
+/* =====================================================
+   INPUT
+===================================================== */
+
+.doc-page .doc-file-input {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  opacity: 0;
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   LISTA DE DOCUMENTOS
+===================================================== */
+
+.doc-page .doc-list-card {
+  box-sizing: border-box;
+
+  width: 100%;
+
+  padding: 22px;
+
+  background: #ffffff;
+
+  border: 1px solid #e0e7ff;
+  border-radius: 16px;
+
+  box-shadow:
+    0 7px 20px rgba(79, 70, 229, 0.08);
+}
+
+
+/* =====================================================
+   LISTA
+===================================================== */
+
+.doc-page .doc-list {
+  width: 100%;
+}
+
+
+/* =====================================================
+   DOCUMENTO
+===================================================== */
+
+.doc-page .doc-item {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  margin-bottom: 10px;
+  padding: 15px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.doc-page .doc-item:last-child {
+  margin-bottom: 0;
+}
+
+.doc-page .doc-item:hover {
+  transform: translateY(-2px);
+
+  border-color: #c7d2fe;
+
+  box-shadow:
+    0 7px 18px rgba(79, 70, 229, 0.10);
+}
+
+
+/* =====================================================
+   INFORMACIÓN
+===================================================== */
+
+.doc-page .doc-info {
+  min-width: 0;
+
+  flex: 1;
+}
+
+.doc-page .doc-name {
+  display: block;
+
+  overflow: hidden;
+
+  color: #1e293b;
+
+  font-size: 15px;
+  font-weight: 800;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.doc-page .doc-meta {
+  margin: 5px 0 0 0;
+
+  overflow: hidden;
+
+  color: #6b7280;
+
+  font-size: 13px;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   BOTONES DE ACCIÓN
+===================================================== */
+
+.doc-page .doc-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  flex-shrink: 0;
+}
+
+.doc-page .doc-view-button,
+.doc-page .doc-download-button,
+.doc-page .doc-delete-button,
+.doc-page .doc-close-button,
+.doc-page .doc-download-file-button {
+  border: none;
+  border-radius: 9px;
+
+  padding: 9px 13px;
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* VISUALIZAR */
+
+.doc-page .doc-view-button {
+  background: #4f46e5;
+}
+
+.doc-page .doc-view-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 12px rgba(79, 70, 229, 0.25);
+}
+
+
+/* DESCARGAR */
+
+.doc-page .doc-download-button {
+  background: #0891b2;
+}
+
+.doc-page .doc-download-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 12px rgba(8, 145, 178, 0.25);
+}
+
+
+/* ELIMINAR */
+
+.doc-page .doc-delete-button {
+  background: #dc2626;
+}
+
+.doc-page .doc-delete-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 12px rgba(220, 38, 38, 0.25);
+}
+
+
+/* =====================================================
+   ESTADO VACÍO
+===================================================== */
+
+.doc-page .doc-empty {
+  padding: 35px 20px;
+
+  background: #f8fafc;
+
+  border-radius: 10px;
+
+  color: #64748b;
+
+  text-align: center;
+
+  font-size: 14px;
+}
+
+
+/* =====================================================
+   VISUALIZADOR
+===================================================== */
+
+.doc-page .doc-viewer-card {
+  box-sizing: border-box;
+
+  width: 100%;
+
+  margin-top: 25px;
+  padding: 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #e0e7ff;
+  border-radius: 16px;
+
+  box-shadow:
+    0 7px 20px rgba(79, 70, 229, 0.08);
+}
+
+
+/* =====================================================
+   CABECERA VISUALIZADOR
+===================================================== */
+
+.doc-page .doc-viewer-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 15px;
+}
+
+.doc-page .doc-viewer-title {
+  min-width: 0;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  color: #3730a3;
+
+  font-size: 20px;
+  font-weight: 800;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   BOTÓN CERRAR
+===================================================== */
+
+.doc-page .doc-close-button {
+  flex-shrink: 0;
+
+  background: #64748b;
+}
+
+.doc-page .doc-close-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 12px rgba(100, 116, 139, 0.25);
+}
+
+
+/* =====================================================
+   IMAGEN
+===================================================== */
+
+.doc-page .doc-image-container {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 15px;
+
+  background: #f8fafc;
+
+  border-radius: 10px;
+}
+
+.doc-page .doc-image-preview {
+  display: block;
+
+  max-width: 100%;
+  max-height: 600px;
+
+  object-fit: contain;
+
+  border-radius: 8px;
+}
+
+
+/* =====================================================
+   PDF
+===================================================== */
+
+.doc-page .doc-pdf-preview {
+  display: block;
+
+  width: 100%;
+  height: 700px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+
+/* =====================================================
+   TEXTO
+===================================================== */
+
+.doc-page .doc-text-preview {
+  display: block;
+
+  width: 100%;
+  height: 600px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+
+/* =====================================================
+   VIDEO
+===================================================== */
+
+.doc-page .doc-video-preview {
+  display: block;
+
+  width: 100%;
+  max-height: 600px;
+
+  border-radius: 10px;
+
+  background: #0f172a;
+}
+
+
+/* =====================================================
+   AUDIO
+===================================================== */
+
+.doc-page .doc-audio-preview {
+  display: block;
+
+  width: 100%;
+}
+
+
+/* =====================================================
+   ARCHIVO NO COMPATIBLE
+===================================================== */
+
+.doc-page .doc-unsupported {
+  padding: 30px;
+
+  background: #f3f4f6;
+
+  border-radius: 10px;
+
+  text-align: center;
+}
+
+.doc-page .doc-unsupported-text {
+  margin: 0 0 18px 0;
+
+  color: #475569;
+
+  font-size: 14px;
+}
+
+.doc-page .doc-download-file-button {
+  background: #4f46e5;
+}
+
+.doc-page .doc-download-file-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 12px rgba(79, 70, 229, 0.25);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .doc-page {
+    padding: 20px;
+  }
+
+  .doc-page .doc-item {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .doc-page .doc-actions {
+    width: 100%;
+  }
+
+}
+
+
+/* =====================================================
+   MÓVIL
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .doc-page {
+    padding: 15px;
+  }
+
+  .doc-page .doc-title {
+    font-size: 25px;
+  }
+
+  .doc-page .doc-upload-card {
+    padding: 20px;
+  }
+
+  .doc-page .doc-list-card,
+  .doc-page .doc-viewer-card {
+    padding: 15px;
+  }
+
+  .doc-page .doc-actions {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 7px;
+  }
+
+  .doc-page .doc-view-button,
+  .doc-page .doc-download-button,
+  .doc-page .doc-delete-button {
+    width: 100%;
+  }
+
+  .doc-page .doc-viewer-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .doc-page .doc-close-button {
+    width: 100%;
+  }
+
+  .doc-page .doc-pdf-preview {
+    height: 500px;
+  }
+
+  .doc-page .doc-text-preview {
+    height: 450px;
+  }
+
+}
+
+
+/* =====================================================
+   MÓVIL PEQUEÑO
+===================================================== */
+
+@media (max-width: 400px) {
+
+  .doc-page {
+    padding: 10px;
+  }
+
+  .doc-page .doc-upload-card {
+    padding: 15px;
+  }
+
+  .doc-page .doc-list-card,
+  .doc-page .doc-viewer-card {
+    padding: 12px;
+  }
+
+}
+

@@ -1,0 +1,297 @@
+
+/* =========================================
+   CLASIFICADOR DE VOZ
+   ESTILOS EXCLUSIVOS DE CLASIFICADOR VOZ
+========================================= */
+
+
+/* =========================================
+   CONTENEDOR PRINCIPAL
+========================================= */
+
+.voz-contenedor-principal {
+  min-height: 100vh;
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  background: #f7f9f1;
+  color: #1e293b;
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.voz-contenedor-principal .voz-titulo {
+  margin: 10px 10px 12px;
+  padding: 10px 16px;
+
+  text-align: center;
+  width: fit-content;
+
+  border: 2px solid blue;
+  border-radius: 16px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  font-size: 20px;
+  font-weight: 400;
+
+  box-shadow:
+    0 8px 20px rgba(79, 70, 229, 0.25);
+}
+
+
+/* =========================================
+   BOTONES
+========================================= */
+
+.voz-contenedor-principal .voz-boton-iniciar,
+.voz-contenedor-principal .voz-boton-detener {
+  margin-left: 20px;
+  padding: 13px 24px;
+
+  border: none;
+  border-radius: 11px;
+
+  background: linear-gradient(
+    135deg,
+    #4f46e5,
+    #7c3aed
+  );
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 6px 15px rgba(79, 70, 229, 0.25);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* =========================================
+   HOVER BOTONES
+========================================= */
+
+.voz-contenedor-principal .voz-boton-iniciar:hover,
+.voz-contenedor-principal .voz-boton-detener:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 22px rgba(79, 70, 229, 0.35);
+}
+
+
+/* =========================================
+   MENSAJE DE ERROR
+========================================= */
+
+.voz-contenedor-principal .voz-mensaje-error {
+  margin: 15px 20px;
+  padding: 13px 16px;
+
+  background: #fef2f2;
+
+  border-left: 5px solid #ef4444;
+  border-radius: 10px;
+
+  color: #b91c1c;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  box-shadow:
+    0 5px 15px rgba(239, 68, 68, 0.12);
+}
+
+
+/* =========================================
+   CONTENEDOR DE PREDICCIONES
+========================================= */
+
+.voz-contenedor-principal
+.voz-predicciones-container {
+  margin: 20px;
+  padding: 22px;
+
+  background: #ffffff;
+
+  border: 1px solid #e0e7ff;
+  border-radius: 18px;
+
+  box-shadow:
+    0 7px 20px rgba(79, 70, 229, 0.08);
+}
+
+
+/* =========================================
+   TÍTULO PREDICCIONES
+========================================= */
+
+.voz-contenedor-principal
+.voz-predicciones-titulo {
+  display: block;
+
+  margin-bottom: 15px;
+  padding-left: 10px;
+
+  border-left: 5px solid #6366f1;
+
+  color: #3730a3;
+
+  font-size: 19px;
+  font-weight: 800;
+}
+
+
+/* =========================================
+   CADA PREDICCIÓN
+========================================= */
+
+.voz-contenedor-principal
+.voz-prediccion {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 10px;
+  padding: 14px 16px;
+
+  background: linear-gradient(
+    90deg,
+    #eef2ff,
+    #f5f3ff
+  );
+
+  border-left: 4px solid #7c3aed;
+  border-radius: 10px;
+
+  color: #334155;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+
+/* =========================================
+   ÚLTIMA PREDICCIÓN
+========================================= */
+
+.voz-contenedor-principal
+.voz-prediccion:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================
+   HOVER PREDICCIÓN
+========================================= */
+
+.voz-contenedor-principal
+.voz-prediccion:hover {
+  transform: translateX(4px);
+
+  background: linear-gradient(
+    90deg,
+    #e0e7ff,
+    #ede9fe
+  );
+}
+
+
+/* =========================================
+   NOMBRE DE LA CLASE
+========================================= */
+
+.voz-contenedor-principal
+.voz-clase {
+  color: #3730a3;
+  font-weight: 800;
+}
+
+
+/* =========================================
+   PORCENTAJE
+========================================= */
+
+.voz-contenedor-principal
+.voz-porcentaje {
+  color: #4f46e5;
+  font-weight: 800;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .voz-contenedor-principal {
+    padding: 10px 0;
+  }
+
+  .voz-contenedor-principal
+  .voz-titulo {
+    margin: 10px;
+    padding: 18px;
+
+    font-size: 23px;
+  }
+
+  .voz-contenedor-principal
+  .voz-boton-iniciar,
+  .voz-contenedor-principal
+  .voz-boton-detener {
+    width: calc(100% - 40px);
+
+    margin: 0 20px 10px;
+  }
+
+  .voz-contenedor-principal
+  .voz-predicciones-container {
+    margin: 15px;
+    padding: 15px;
+  }
+
+  .voz-contenedor-principal
+  .voz-prediccion {
+    padding: 13px 14px;
+  }
+}
+
+
+/* =========================================
+   MÓVILES PEQUEÑOS
+========================================= */
+
+@media (max-width: 400px) {
+
+  .voz-contenedor-principal
+  .voz-predicciones-container {
+    padding: 10px;
+  }
+
+  .voz-contenedor-principal
+  .voz-prediccion {
+    padding: 12px;
+
+    font-size: 13px;
+  }
+}
+

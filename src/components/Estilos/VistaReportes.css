@@ -1,0 +1,962 @@
+
+/* ========================================
+   CONTENEDOR PRINCIPAL
+======================================== */
+
+.reportes-container {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 25px;
+
+  box-sizing: border-box;
+
+  background: #f4f7fb;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  color: #1f2937;
+}
+
+
+/* ========================================
+   ENCABEZADO
+======================================== */
+
+.reportes-header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  margin-bottom: 24px;
+}
+
+.reportes-header h1 {
+  margin: 0 0 6px;
+
+  font-size: 25px;
+
+  font-weight: 700;
+
+  color: #1e293b;
+}
+
+.reportes-header p {
+  margin: 0;
+
+  font-size: 14px;
+
+  color: #64748b;
+}
+
+
+/* ========================================
+   BOTÓN EXPORTAR
+======================================== */
+
+.btn-exportar {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 38px;
+
+  padding: 10px 18px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #2563eb;
+
+  color: white;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 4px 10px rgba(37, 99, 235, 0.18);
+
+  transition: all 0.2s ease;
+}
+
+.btn-exportar:hover {
+  background: #1d4ed8;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 6px 14px rgba(37, 99, 235, 0.25);
+}
+
+.btn-exportar:active {
+  transform: translateY(0);
+}
+
+
+/* ========================================
+   BOTONES GENERALES
+======================================== */
+
+.reportes-container button {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.reportes-container button:disabled {
+  opacity: 0.55;
+
+  cursor: not-allowed;
+
+  transform: none !important;
+
+  box-shadow: none;
+}
+
+
+/* ========================================
+   TARJETAS DE RESUMEN
+======================================== */
+
+.resumen-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 16px;
+
+  margin-bottom: 22px;
+}
+
+.resumen-card {
+  position: relative;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 13px;
+
+  padding: 19px;
+
+  box-shadow:
+    0 4px 12px rgba(15, 23, 42, 0.06);
+
+  transition: all 0.2s ease;
+}
+
+.resumen-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 18px rgba(15, 23, 42, 0.09);
+}
+
+.resumen-card::after {
+  content: "";
+
+  position: absolute;
+
+  right: -25px;
+  bottom: -25px;
+
+  width: 80px;
+  height: 80px;
+
+  border-radius: 50%;
+
+  background: rgba(37, 99, 235, 0.05);
+}
+
+.resumen-card span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 12px;
+
+  color: #64748b;
+}
+
+.resumen-card strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-size: 28px;
+
+  font-weight: 700;
+}
+
+.resumen-card small {
+  font-size: 11px;
+
+  color: #94a3b8;
+}
+.strong {
+  margin: 20px;
+}
+
+
+/* ========================================
+   COLORES DE RESUMEN
+======================================== */
+
+.valor-azul {
+  color: #2563eb;
+}
+
+.valor-verde {
+  color: #10b981;
+}
+
+.valor-naranja {
+  color: #f59e0b;
+}
+
+.valor-morado {
+  color: #7c3aed;
+}
+
+
+/* ========================================
+   GRID PRINCIPAL DE GRÁFICOS
+======================================== */
+
+.graficos-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.7fr)
+    minmax(0, 1fr);
+
+  gap: 20px;
+
+  margin-bottom: 20px;
+}
+
+.graficos-grid.inferior {
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+}
+
+
+/* ========================================
+   TARJETAS DE REPORTES
+======================================== */
+
+.reporte-card {
+  min-width: 0;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 13px;
+
+  padding: 20px;
+
+  box-shadow:
+    0 4px 12px rgba(15, 23, 42, 0.06);
+
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.reporte-card:hover {
+  box-shadow:
+    0 7px 18px rgba(15, 23, 42, 0.08);
+}
+
+
+/* ========================================
+   CABECERA DE TARJETAS
+======================================== */
+
+.card-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 15px;
+
+  margin-bottom: 18px;
+}
+
+.card-header h2 {
+  margin: 0 0 5px;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  color: #1e293b;
+}
+
+.card-header p {
+  margin: 0;
+
+  font-size: 12px;
+
+  color: #64748b;
+
+  line-height: 1.5;
+}
+
+
+/* ========================================
+   CONTENEDOR DE GRÁFICOS
+======================================== */
+
+.grafico {
+  width: 100%;
+
+  height: 310px;
+
+  position: relative;
+}
+
+.grafico-pie {
+  height: 330px;
+}
+
+
+/* ========================================
+   RECHARTS
+======================================== */
+
+.recharts-wrapper {
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+.recharts-cartesian-axis-tick-value {
+  fill: #64748b;
+
+  font-size: 11px;
+}
+
+.recharts-cartesian-grid-horizontal line {
+  stroke: #e5e7eb;
+
+  stroke-dasharray: 4 4;
+}
+
+.recharts-cartesian-grid-vertical line {
+  stroke: transparent;
+}
+
+
+/* ========================================
+   TOOLTIP
+======================================== */
+
+.recharts-tooltip-wrapper {
+  outline: none;
+}
+
+.recharts-default-tooltip {
+  padding: 10px 13px !important;
+
+  border: 1px solid #e2e8f0 !important;
+
+  border-radius: 9px !important;
+
+  background: #ffffff !important;
+
+  box-shadow:
+    0 5px 15px rgba(15, 23, 42, 0.12) !important;
+}
+
+.recharts-tooltip-label {
+  margin-bottom: 5px !important;
+
+  color: #1e293b !important;
+
+  font-size: 12px !important;
+
+  font-weight: 700 !important;
+}
+
+.recharts-tooltip-item {
+  font-size: 11px !important;
+}
+
+
+/* ========================================
+   LEYENDA
+======================================== */
+
+.recharts-legend-wrapper {
+  font-size: 11px !important;
+}
+
+.recharts-legend-item-text {
+  color: #64748b !important;
+}
+
+
+/* ========================================
+   LISTA DE MÓDULOS
+======================================== */
+
+.modulos-lista {
+  display: flex;
+
+  flex-direction: column;
+
+  margin-bottom: 22px;
+}
+
+.modulo-item {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 12px 0;
+
+  border-bottom:
+    1px solid #e2e8f0;
+}
+
+.modulo-item:last-child {
+  border-bottom: none;
+}
+
+.modulo-info {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  font-size: 12px;
+
+  color: #475569;
+}
+
+.modulo-indicador {
+  display: inline-block;
+
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+}
+
+.modulo-item > strong {
+  font-size: 13px;
+
+  color: #1e293b;
+}
+
+
+/* ========================================
+   BARRAS DE PROGRESO
+======================================== */
+
+.progreso-container {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.progreso-item {
+  width: 100%;
+}
+
+.progreso-titulo {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 6px;
+
+  font-size: 11px;
+
+  color: #64748b;
+}
+
+.progreso-titulo strong {
+  color: #1e293b;
+}
+
+.progreso-barra {
+  width: 100%;
+
+  height: 8px;
+
+  overflow: hidden;
+
+  background: #e8edf4;
+
+  border-radius: 20px;
+}
+
+.progreso-valor {
+  height: 100%;
+
+  border-radius: 20px;
+
+  transition: width 0.5s ease;
+}
+
+
+/* ========================================
+   TABLA DE RENDIMIENTO
+======================================== */
+
+.tabla-reporte {
+  margin-bottom: 20px;
+}
+
+.tabla-container {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+.tabla-container table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  font-size: 12px;
+}
+
+.tabla-container th {
+  padding: 11px 13px;
+
+  text-align: left;
+
+  background: #2563eb;
+
+  color: white;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+.tabla-container th:first-child {
+  border-radius: 7px 0 0 7px;
+}
+
+.tabla-container th:last-child {
+  border-radius: 0 7px 7px 0;
+}
+
+.tabla-container td {
+  padding: 12px 13px;
+
+  border-bottom:
+    1px solid #e2e8f0;
+
+  color: #475569;
+}
+
+.tabla-container tbody tr {
+  transition:
+    background 0.15s ease;
+}
+
+.tabla-container tbody tr:hover {
+  background: #f8fafc;
+}
+
+.tabla-container td strong {
+  color: #1e293b;
+}
+
+
+/* ========================================
+   ESTADOS
+======================================== */
+
+.estado-excelente,
+.estado-bueno {
+  display: inline-block;
+
+  padding: 5px 10px;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+.estado-excelente {
+  background: #dcfce7;
+
+  color: #15803d;
+}
+
+.estado-bueno {
+  background: #fef3c7;
+
+  color: #b45309;
+}
+
+
+/* ========================================
+   BOTONES DE FILTROS
+   (si se agregan posteriormente)
+======================================== */
+
+.filtros-graficos {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 15px;
+}
+
+.filtro-grafico {
+  padding: 7px 12px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: #64748b;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.filtro-grafico:hover {
+  border-color: #2563eb;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+}
+
+.filtro-grafico.activo {
+  border-color: #2563eb;
+
+  background: #2563eb;
+
+  color: #ffffff;
+}
+
+
+/* ========================================
+   BOTONES SECUNDARIOS
+======================================== */
+
+.btn-secundario {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 9px 14px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #475569;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.btn-secundario:hover {
+  border-color: #94a3b8;
+
+  background: #f8fafc;
+
+  color: #1e293b;
+}
+
+
+/* ========================================
+   BOTÓN VERDE
+======================================== */
+
+.btn-verde {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 9px 14px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #10b981;
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.btn-verde:hover {
+  background: #059669;
+
+  transform: translateY(-1px);
+}
+
+
+/* ========================================
+   BOTÓN NARANJA
+======================================== */
+
+.btn-naranja {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 9px 14px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #f59e0b;
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.btn-naranja:hover {
+  background: #d97706;
+
+  transform: translateY(-1px);
+}
+
+
+/* ========================================
+   BOTÓN ROJO
+======================================== */
+
+.btn-rojo {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 9px 14px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #ef4444;
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.btn-rojo:hover {
+  background: #dc2626;
+
+  transform: translateY(-1px);
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 1100px) {
+
+  .resumen-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .graficos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .graficos-grid.inferior {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 800px) {
+
+  .reportes-container {
+    padding: 20px;
+  }
+
+  .reportes-header {
+    align-items: flex-start;
+  }
+
+  .grafico {
+    height: 290px;
+  }
+
+  .grafico-pie {
+    height: 310px;
+  }
+}
+
+
+/* ========================================
+   MÓVIL
+======================================== */
+
+@media (max-width: 650px) {
+
+  .reportes-container {
+    padding: 15px;
+  }
+
+  .reportes-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .reportes-header h1 {
+    font-size: 21px;
+  }
+
+  .reportes-header p {
+    font-size: 12px;
+  }
+
+  .btn-exportar {
+    width: 100%;
+  }
+
+  .resumen-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reporte-card {
+    padding: 15px;
+  }
+
+  .grafico {
+    height: 270px;
+  }
+
+  .grafico-pie {
+    height: 290px;
+  }
+
+  .filtros-graficos {
+    display: grid;
+
+    grid-template-columns:
+      1fr 1fr;
+
+    width: 100%;
+  }
+
+  .filtro-grafico {
+    width: 100%;
+  }
+
+  .tabla-container {
+    overflow-x: auto;
+  }
+
+  .tabla-container table {
+    min-width: 500px;
+  }
+}
+
+
+/* ========================================
+   IMPRESIÓN
+======================================== */
+
+@media print {
+
+  .reportes-container {
+    background: #ffffff;
+
+    padding: 10px;
+  }
+
+  .btn-exportar {
+    display: none;
+  }
+
+  .reporte-card,
+  .resumen-card {
+    box-shadow: none;
+
+    break-inside: avoid;
+  }
+
+  .graficos-grid {
+    break-inside: avoid;
+  }
+}
+

@@ -1,0 +1,528 @@
+
+/* ========================================
+   CONTENEDOR PRINCIPAL
+======================================== */
+
+.pandas-numpy-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 25px;
+  box-sizing: border-box;
+  background: #f4f7fb;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f2937;
+}
+
+/* ========================================
+   ENCABEZADO
+======================================== */
+
+.pandas-numpy-header {
+  margin-bottom: 20px;
+}
+
+.pandas-numpy-header h1 {
+  margin: 0 0 6px 0;
+  font-size: 25px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.pandas-numpy-header p {
+  margin: 0;
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* ========================================
+   DISTRIBUCIÓN PRINCIPAL
+======================================== */
+
+.pandas-numpy-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 20px;
+  align-items: start;
+}
+
+/* ========================================
+   CONTENIDO PRINCIPAL
+======================================== */
+
+.pandas-numpy-main {
+  min-width: 0;
+}
+
+/* ========================================
+   TARJETAS
+======================================== */
+
+.pandas-numpy-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 18px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.06);
+  box-sizing: border-box;
+}
+
+/* ========================================
+   BOTÓN / SELECTOR DE ARCHIVO
+======================================== */
+
+.pandas-numpy-upload {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+  border: none;
+}
+
+.pandas-numpy-upload:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.pandas-numpy-upload input[type="file"] {
+  display: none;
+}
+
+.pandas-numpy-card > p {
+  margin: 12px 0 0;
+  font-size: 13px;
+  color: #475569;
+}
+
+.pandas-numpy-card strong {
+  color: #1e293b;
+}
+
+/* ========================================
+   BOTONES
+======================================== */
+
+.pandas-numpy-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.pandas-numpy-buttons button {
+  padding: 9px 15px;
+  border: none;
+  border-radius: 7px;
+  background: #2563eb;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.pandas-numpy-buttons button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.pandas-numpy-buttons button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.pandas-numpy-buttons .btn-limpiar {
+  background: #ef4444;
+}
+
+.pandas-numpy-buttons .btn-limpiar:hover {
+  background: #dc2626;
+}
+
+/* ========================================
+   MENSAJE DE ERROR
+======================================== */
+
+.mensaje-error {
+  margin-top: 12px !important;
+  padding: 9px 12px;
+  border-radius: 7px;
+  background: #fef2f2;
+  color: #dc2626 !important;
+  border: 1px solid #fecaca;
+  font-size: 12px !important;
+}
+
+/* ========================================
+   ANÁLISIS GENERAL
+======================================== */
+
+.analisis-general {
+  border-left: 4px solid #2563eb;
+}
+
+.analisis-general h2 {
+  margin: 0 0 14px;
+  font-size: 16px;
+  color: #2563eb;
+}
+
+/* ========================================
+   INFORMACIÓN GENERAL
+======================================== */
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.info-item {
+  padding: 13px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+  text-align: center;
+}
+
+.info-item span {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 11px;
+  color: #64748b;
+}
+
+.info-item strong {
+  display: block;
+  font-size: 20px;
+  color: #2563eb;
+}
+
+/* ========================================
+   LISTA DE COLUMNAS
+======================================== */
+
+.columnas-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 8px;
+}
+
+.columna-item {
+  padding: 6px 9px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 6px;
+  font-size: 11px;
+  color: #1d4ed8;
+}
+
+/* ========================================
+   TIPOS DE DATOS
+======================================== */
+
+.tipos-datos {
+  margin-top: 15px;
+}
+
+.tipo-dato {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 9px;
+  margin-bottom: 5px;
+  background: #f8fafc;
+  border-radius: 6px;
+  font-size: 11px;
+}
+
+.tipo-dato strong {
+  color: #2563eb;
+}
+
+/* ========================================
+   RESULTADOS
+======================================== */
+
+.resultados-pandas-numpy {
+  min-width: 0;
+}
+
+/* ========================================
+   TÍTULOS DE RESULTADOS
+======================================== */
+
+.resultados-pandas-numpy h2 {
+  margin: 0 0 14px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.resultados-pandas-numpy h3 {
+  margin: 12px 0 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+/* ========================================
+   TEXTOS DE RESULTADOS
+======================================== */
+
+.resultados-pandas-numpy p {
+  margin: 6px 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #475569;
+}
+
+/* ========================================
+   ESTADÍSTICAS
+======================================== */
+
+.estadisticas-pandas-numpy {
+  border-left: 4px solid #06b6d4;
+}
+
+.estadistica-pandas-numpy {
+  padding: 12px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.estadistica-pandas-numpy:first-child {
+  padding-top: 0;
+}
+
+.estadistica-pandas-numpy:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.estadistica-pandas-numpy h3 {
+  margin: 0 0 9px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0891b2;
+}
+
+.estadistica-pandas-numpy > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+}
+
+.estadistica-pandas-numpy span {
+  font-size: 11px;
+  color: #64748b;
+}
+
+.estadistica-pandas-numpy strong {
+  font-size: 12px;
+  color: #1e293b;
+}
+
+/* ========================================
+   PRODUCTOS
+======================================== */
+
+.ventas-productos {
+  border-left: 4px solid #22c55e;
+}
+
+.producto-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.producto-item:last-child {
+  border-bottom: none;
+}
+
+.producto-item strong {
+  font-size: 13px;
+  color: #16a34a;
+}
+
+/* ========================================
+   VALORES ATÍPICOS
+======================================== */
+
+.valores-atipicos {
+  border-left: 4px solid #f59e0b;
+}
+
+.valor-atipico {
+  padding: 10px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.valor-atipico:last-child {
+  border-bottom: none;
+}
+
+.valor-atipico h3 {
+  color: #d97706;
+}
+
+/* ========================================
+   CORRELACIONES
+======================================== */
+
+.correlaciones {
+  border-left: 4px solid #8b5cf6;
+}
+
+.correlacion-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 9px 10px;
+  margin-bottom: 6px;
+
+  background: #f8fafc;
+  border-radius: 7px;
+
+  font-size: 11px;
+  color: #475569;
+}
+
+.correlacion-item strong {
+  color: #7c3aed;
+  font-size: 12px;
+}
+
+/* ========================================
+   BARRA LATERAL
+======================================== */
+
+.pandas-numpy-sidebar {
+  width: 100%;
+  min-width: 0;
+}
+
+/* ========================================
+   BÚSQUEDA
+======================================== */
+
+.pandas-numpy-sidebar input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  font-size: 12px;
+  color: #334155;
+  background: #ffffff;
+  transition: 0.2s ease;
+}
+
+.pandas-numpy-sidebar input[type="text"]:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+/* ========================================
+   OPERACIONES LATERALES
+======================================== */
+
+.operaciones-pandas-numpy {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.operaciones-pandas-numpy button {
+  width: 100%;
+  padding: 9px 10px;
+  border: none;
+  border-radius: 7px;
+  background: #2563eb;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+  text-align: left;
+}
+
+.operaciones-pandas-numpy button:hover {
+  background: #1d4ed8;
+  transform: translateX(2px);
+}
+
+.operaciones-pandas-numpy .btn-limpiar {
+  background: #ef4444;
+}
+
+.operaciones-pandas-numpy .btn-limpiar:hover {
+  background: #dc2626;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+  .pandas-numpy-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .pandas-numpy-sidebar {
+    order: -1;
+  }
+
+  .operaciones-pandas-numpy {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .operaciones-pandas-numpy button {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .pandas-numpy-container {
+    padding: 15px;
+  }
+
+  .pandas-numpy-header h1 {
+    font-size: 21px;
+  }
+
+  .pandas-numpy-header p {
+    font-size: 12px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .operaciones-pandas-numpy {
+    grid-template-columns: 1fr;
+  }
+
+  .pandas-numpy-card {
+    padding: 14px;
+  }
+
+  .resultados-pandas-numpy h2 {
+    font-size: 14px;
+  }
+}
+

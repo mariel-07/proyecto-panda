@@ -1,0 +1,344 @@
+
+/* =====================================================
+   LOGIN - CONTENEDOR PRINCIPAL
+   Todos los estilos están aislados mediante .login-
+===================================================== */
+
+.login-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px;
+  box-sizing: border-box;
+
+  background: linear-gradient(
+    135deg,
+    #eef2ff,
+    #f5f3ff,
+    #ecfdf5
+  );
+}
+
+
+/* =====================================================
+   TARJETA DE LOGIN
+===================================================== */
+
+.login-card {
+  width: 100%;
+  max-width: 430px;
+
+  padding: 40px;
+
+  background: #ffffff;
+
+  border: 1px solid #e0e7ff;
+  border-radius: 24px;
+
+  box-shadow:
+    0 20px 50px rgba(79, 70, 229, 0.15);
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   CABECERA
+===================================================== */
+
+.login-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.login-logo {
+  width: 75px;
+  height: 75px;
+
+  margin: 0 auto 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    135deg,
+    #4f46e5,
+    #7c3aed
+  );
+
+  border-radius: 50%;
+
+  font-size: 40px;
+
+  box-shadow:
+    0 10px 25px rgba(79, 70, 229, 0.3);
+}
+
+
+/* =====================================================
+   TÍTULO PANDA
+===================================================== */
+
+.login-card .login-header h1 {
+  margin: 0 0 8px;
+
+  color: #1e293b;
+
+  font-size: 32px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+
+/* =====================================================
+   SUBTÍTULO
+===================================================== */
+
+.login-card .login-header p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 15px;
+}
+
+
+/* =====================================================
+   FORMULARIO
+===================================================== */
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+
+/* =====================================================
+   GRUPO DEL FORMULARIO
+===================================================== */
+
+.login-form .form-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+
+/* =====================================================
+   LABEL
+===================================================== */
+
+.login-form .form-group label {
+  color: #334155;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+.login-form .form-group input {
+  width: 100%;
+
+  padding: 14px 16px;
+
+  box-sizing: border-box;
+
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+
+  outline: none;
+
+  background: #f8fafc;
+
+  color: #1e293b;
+
+  font-size: 15px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+
+/* =====================================================
+   INPUT - HOVER
+===================================================== */
+
+.login-form .form-group input:hover {
+  border-color: #c7d2fe;
+}
+
+
+/* =====================================================
+   INPUT - FOCUS
+===================================================== */
+
+.login-form .form-group input:focus {
+  background: #ffffff;
+
+  border-color: #6366f1;
+
+  box-shadow:
+    0 0 0 4px rgba(99, 102, 241, 0.12);
+}
+
+
+/* =====================================================
+   PLACEHOLDER
+===================================================== */
+
+.login-form .form-group input::placeholder {
+  color: #94a3b8;
+}
+
+
+/* =====================================================
+   MENSAJE DE ERROR
+===================================================== */
+
+.login-error {
+  width: 100%;
+
+  padding: 12px 15px;
+
+  box-sizing: border-box;
+
+  background: #fef2f2;
+
+  border: 1px solid #fecaca;
+  border-left: 4px solid #ef4444;
+
+  border-radius: 10px;
+
+  color: #b91c1c;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  line-height: 1.4;
+}
+
+
+/* =====================================================
+   BOTÓN LOGIN
+===================================================== */
+
+.login-form .login-button {
+  width: 100%;
+
+  padding: 14px 20px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #4f46e5,
+    #7c3aed
+  );
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 7px 18px rgba(79, 70, 229, 0.25);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+
+/* =====================================================
+   BOTÓN - HOVER
+===================================================== */
+
+.login-form .login-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 11px 25px rgba(79, 70, 229, 0.35);
+}
+
+
+/* =====================================================
+   BOTÓN - ACTIVE
+===================================================== */
+
+.login-form .login-button:active {
+  transform: translateY(0);
+
+  box-shadow:
+    0 5px 12px rgba(79, 70, 229, 0.25);
+}
+
+
+/* =====================================================
+   RESPONSIVE - TABLETS
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .login-container {
+    padding: 20px;
+  }
+
+  .login-card {
+    padding: 30px 25px;
+
+    border-radius: 20px;
+  }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE - MÓVILES PEQUEÑOS
+===================================================== */
+
+@media (max-width: 400px) {
+
+  .login-container {
+    padding: 15px;
+  }
+
+  .login-card {
+    padding: 25px 20px;
+  }
+
+  .login-logo {
+    width: 65px;
+    height: 65px;
+
+    font-size: 34px;
+  }
+
+  .login-card .login-header h1 {
+    font-size: 27px;
+  }
+
+}
+
